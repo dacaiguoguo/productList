@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 enum {	/* Constants returned by -operatingSystem */
-    ProductListTypeTwo = 2,
-    ProductListTypeSingle = 1,
+    YKProductListTypeTwo = 2,
+    YKProductListTypeSingle = 1,
 };
 
-typedef NSInteger ProductListType;
+typedef NSInteger YKProductListType;
 @interface YKProductCellView : UIView
 - (id)initWithFrame:(CGRect)frame salePrice:(NSString *)_salePrice shopPrice:(NSString *)_shopPrice productName:(NSString *)_productName imageUrl:(NSString *)_imageUrl;
 @end
@@ -35,13 +35,12 @@ typedef NSInteger ProductListType;
 
 @end
 @protocol YKProductListViewDataSource<NSObject>
-- (UIView*)cellViewModel;
 - (NSString *)imageUrlForIndex:(int )_index;
-- (NSString *)salePriceForIndwx:(int)_index;
+- (NSString *)salePriceForIndex:(int)_index;
 - (NSString *)shopPriceForIndex:(int)_index;
 - (NSString *)productNameForIndex:(int)_index;
 - (NSInteger)numberOfItems;
-- (ProductListType)productListType;
+- (YKProductListType)productListType;
 @end
 
 

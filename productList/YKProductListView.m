@@ -110,14 +110,24 @@
     static NSString *idfiSingle = @"YKTableViewCellForProductListSingle";
 
     
-    if ([self.dataSource productListType]==ProductListTypeTwo) {
+    if ([self.dataSource productListType]==YKProductListTypeTwo) {
         YKProductViewCellTwo *cell = [tableView dequeueReusableCellWithIdentifier:idfiTwo];
         if (!cell) {
             cell = [YKXIBHelper loadObjectFromXIBName:@"YKProductCell" type:[YKProductViewCellTwo class]];
         }
-
-        cell.leftImageView.image = [UIImage imageNamed:@"moo.png"];
-        cell.rightImageView.image = [UIImage imageNamed:@"moo.png"];
+        int row = indexPath.row;
+        
+        cell.leftImageView.image =[UIImage imageNamed:[self.dataSource imageUrlForIndex:row*2]];
+        cell.leftNameLabel.text = [self.dataSource productNameForIndex:row*2];
+        cell.leftSalePriceLabel.text = [self.dataSource salePriceForIndex:row*2];
+        if (row*2+1>=[self.dataSource numberOfItems]) {
+            cell.rightImageView.hidden = YES;
+        }else{
+            cell.hidden = NO;
+            cell.rightNameLabel.text = [self.dataSource productNameForIndex:row*2+1];
+            cell.rightSalePriceLabel.text = [self.dataSource salePriceForIndex:row*2+1];
+            cell.rightImageView.image = [UIImage imageNamed:[self.dataSource imageUrlForIndex:row*2+1]];
+        }
         return cell;
 
     }else{
@@ -128,7 +138,7 @@
         int row = indexPath.row;
         cell.imageView.image= [UIImage imageNamed:[self.dataSource imageUrlForIndex:row]];
         cell.nameLabel.text = [self.dataSource productNameForIndex:row];
-        cell.salePriceLabel.text = [self.dataSource salePriceForIndwx:row];
+        cell.salePriceLabel.text = [self.dataSource salePriceForIndex:row];
         cell.shopPriceLabel.text = [self.dataSource shopPriceForIndex:row];
         return cell;
     }

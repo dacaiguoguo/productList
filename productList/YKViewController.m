@@ -10,6 +10,7 @@
 #import "YKProductListView.h"
 @interface YKViewController ()
 @property (strong,nonatomic) YKProductListView *listView;
+@property (assign) YKProductListType type;
 @end
 
 @implementation YKViewController
@@ -18,8 +19,8 @@
 - (NSInteger)numberOfItems{
     return 10;
 }
-- (ProductListType)productListType{
-    return ProductListTypeSingle;
+- (YKProductListType)productListType{
+    return _type;
 }
 
 - (NSString *)imageUrlForIndex:(int)_index{
@@ -28,19 +29,27 @@
 - (NSString *)productNameForIndex:(int)_index{
     return @"男装";
 }
-- (NSString *)salePriceForIndwx:(int)_index{
+- (NSString *)salePriceForIndex:(int)_index{
     return @"88.8";
 }
 - (NSString *)shopPriceForIndex:(int)_index{
     return @"99.9";
 }
-- (UIView*)cellViewModel{
-    return [[YKProductCellView alloc] initWithFrame:CGRectMake(0, 0, 160, 130) salePrice:@"Y12.5" shopPrice:nil productName:@"户外运动。。。" imageUrl:nil];
+
+- (void)reloadView{
+    if (_type==YKProductListTypeSingle) {
+        _type=YKProductListTypeTwo;
+    }else{
+        _type = YKProductListTypeSingle;
+    }
+    [self.listView reloadData];
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _type = YKProductListTypeSingle;
     self.title = @"viewC";
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(reloadView)];
     self.listView = [[YKProductListView alloc] initWithFrame:CGRectMake(0, 0, 320, 460-46)];
     _listView.dataSource = self;
    [self.view addSubview:_listView];
