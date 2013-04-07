@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface YKViewController : UIViewController
+#import "YKProductListView.h"
+@interface YKViewController : UIViewController<YKProductListViewDataSource>
 
 @end

@@ -23,6 +23,10 @@
 		59CCA2EC17111108009E021D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CCA2C717111107009E021D /* Foundation.framework */; };
 		59CCA2F417111108009E021D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59CCA2F217111108009E021D /* InfoPlist.strings */; };
 		59CCA2F717111108009E021D /* productListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59CCA2F617111108009E021D /* productListTests.m */; };
+		59CCA30217111202009E021D /* YKProductListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59CCA30117111202009E021D /* YKProductListView.m */; };
+		59CCA30417111D99009E021D /* moo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59CCA30317111D99009E021D /* moo@2x.png */; };
+		59CCA306171122AB009E021D /* YKProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59CCA305171122AB009E021D /* YKProductCell.xib */; };
+		59CCA30A1711248E009E021D /* YKXIBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 59CCA3081711248A009E021D /* YKXIBHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,12 @@
 		59CCA2F317111108009E021D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		59CCA2F517111108009E021D /* productListTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = productListTests.h; sourceTree = "<group>"; };
 		59CCA2F617111108009E021D /* productListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = productListTests.m; sourceTree = "<group>"; };
+		59CCA30017111202009E021D /* YKProductListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKProductListView.h; sourceTree = "<group>"; };
+		59CCA30117111202009E021D /* YKProductListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKProductListView.m; sourceTree = "<group>"; };
+		59CCA30317111D99009E021D /* moo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "moo@2x.png"; sourceTree = "<group>"; };
+		59CCA305171122AB009E021D /* YKProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YKProductCell.xib; sourceTree = "<group>"; };
+		59CCA3071711248A009E021D /* YKXIBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKXIBHelper.h; sourceTree = "<group>"; };
+		59CCA3081711248A009E021D /* YKXIBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKXIBHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +131,13 @@
 				59CCA2D517111107009E021D /* YKAppDelegate.m */,
 				59CCA2DD17111108009E021D /* YKViewController.h */,
 				59CCA2DE17111108009E021D /* YKViewController.m */,
+				59CCA30017111202009E021D /* YKProductListView.h */,
+				59CCA30117111202009E021D /* YKProductListView.m */,
+				59CCA3071711248A009E021D /* YKXIBHelper.h */,
+				59CCA3081711248A009E021D /* YKXIBHelper.m */,
+				59CCA30317111D99009E021D /* moo@2x.png */,
 				59CCA2E017111108009E021D /* YKViewController.xib */,
+				59CCA305171122AB009E021D /* YKProductCell.xib */,
 				59CCA2CC17111107009E021D /* Supporting Files */,
 			);
 			path = productList;
@@ -237,6 +253,8 @@
 				59CCA2DA17111108009E021D /* Default@2x.png in Resources */,
 				59CCA2DC17111108009E021D /* Default-568h@2x.png in Resources */,
 				59CCA2E217111108009E021D /* YKViewController.xib in Resources */,
+				59CCA30417111D99009E021D /* moo@2x.png in Resources */,
+				59CCA306171122AB009E021D /* YKProductCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +292,8 @@
 				59CCA2D217111107009E021D /* main.m in Sources */,
 				59CCA2D617111107009E021D /* YKAppDelegate.m in Sources */,
 				59CCA2DF17111108009E021D /* YKViewController.m in Sources */,
+				59CCA30217111202009E021D /* YKProductListView.m in Sources */,
+				59CCA30A1711248E009E021D /* YKXIBHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
