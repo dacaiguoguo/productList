@@ -16,41 +16,7 @@
 
 @end
 
-@interface YKProductCellView ()
-@property (nonatomic, strong) UIImageView *iconImageView;
-@property (nonatomic, strong) UILabel *salePriceLabel;
-@property (nonatomic, strong) UILabel *productNameLabel;
-@end
-@implementation YKProductCellView
 
-@synthesize iconImageView = _iconImageView;
-@synthesize productNameLabel= _productNameLabel;
-@synthesize salePriceLabel = _salePriceLabel;
-- (void)initViews{
-
-}
-- (id)initWithFrame:(CGRect)frame salePrice:(NSString *)_salePrice shopPrice:(NSString *)_shopPrice productName:(NSString *)_productName imageUrl:(NSString *)_imageUrl{
-    self = [super initWithFrame:frame];
-    if(self){
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 140, 80)];
-        imageView.image = [UIImage imageNamed:@"moo.png"];
-        self.iconImageView = imageView;
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 145, 140, 20)];
-        label.textColor = [UIColor blackColor];
-        label.text = _salePrice;
-        self.salePriceLabel = label;
-        label = [[UILabel alloc] initWithFrame:CGRectMake(10, 165, 140, 20)];
-        label.textColor = [UIColor blackColor];
-        label.text = _productName;
-        self.productNameLabel = label;
-        [self addSubview:_iconImageView];
-        [self addSubview:_salePriceLabel];
-        [self addSubview:_productNameLabel];
-    }
-    return self;
-}
-
-@end
 
 @implementation YKProductViewCellSingle
 

@@ -13,9 +13,7 @@ enum {	/* Constants returned by -operatingSystem */
 };
 
 typedef NSInteger YKProductListType;
-@interface YKProductCellView : UIView
-- (id)initWithFrame:(CGRect)frame salePrice:(NSString *)_salePrice shopPrice:(NSString *)_shopPrice productName:(NSString *)_productName imageUrl:(NSString *)_imageUrl;
-@end
+
 
 @interface YKProductViewCellSingle :UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
