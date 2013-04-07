@@ -7,12 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-enum {	/* YKProductListType */
+
+typedef enum YKProductListType : NSInteger{
     YKProductListTypeTwo = 2,
     YKProductListTypeSingle = 1,
-};
-
-typedef NSInteger YKProductListType;
+}YKProductListType;
 
 
 @interface YKProductViewCellSingle :UITableViewCell
