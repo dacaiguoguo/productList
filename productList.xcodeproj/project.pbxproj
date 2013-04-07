@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		593D8EAE171151300043D42C /* foo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 593D8EAD171151300043D42C /* foo@2x.png */; };
 		59CCA2C617111107009E021D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CCA2C517111107009E021D /* UIKit.framework */; };
 		59CCA2C817111107009E021D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CCA2C717111107009E021D /* Foundation.framework */; };
 		59CCA2CA17111107009E021D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CCA2C917111107009E021D /* CoreGraphics.framework */; };
@@ -24,7 +25,6 @@
 		59CCA2F417111108009E021D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59CCA2F217111108009E021D /* InfoPlist.strings */; };
 		59CCA2F717111108009E021D /* productListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59CCA2F617111108009E021D /* productListTests.m */; };
 		59CCA30217111202009E021D /* YKProductListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59CCA30117111202009E021D /* YKProductListView.m */; };
-		59CCA30417111D99009E021D /* moo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59CCA30317111D99009E021D /* moo@2x.png */; };
 		59CCA306171122AB009E021D /* YKProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59CCA305171122AB009E021D /* YKProductCell.xib */; };
 		59CCA30A1711248E009E021D /* YKXIBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 59CCA3081711248A009E021D /* YKXIBHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
@@ -40,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		593D8EAD171151300043D42C /* foo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "foo@2x.png"; sourceTree = "<group>"; };
 		59CCA2C217111107009E021D /* productList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = productList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59CCA2C517111107009E021D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		59CCA2C717111107009E021D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,7 +65,6 @@
 		59CCA2F617111108009E021D /* productListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = productListTests.m; sourceTree = "<group>"; };
 		59CCA30017111202009E021D /* YKProductListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKProductListView.h; sourceTree = "<group>"; };
 		59CCA30117111202009E021D /* YKProductListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKProductListView.m; sourceTree = "<group>"; };
-		59CCA30317111D99009E021D /* moo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "moo@2x.png"; sourceTree = "<group>"; };
 		59CCA305171122AB009E021D /* YKProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YKProductCell.xib; sourceTree = "<group>"; };
 		59CCA3071711248A009E021D /* YKXIBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKXIBHelper.h; sourceTree = "<group>"; };
 		59CCA3081711248A009E021D /* YKXIBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKXIBHelper.m; sourceTree = "<group>"; };
@@ -135,8 +135,8 @@
 				59CCA30117111202009E021D /* YKProductListView.m */,
 				59CCA3071711248A009E021D /* YKXIBHelper.h */,
 				59CCA3081711248A009E021D /* YKXIBHelper.m */,
-				59CCA30317111D99009E021D /* moo@2x.png */,
 				59CCA2E017111108009E021D /* YKViewController.xib */,
+				593D8EAD171151300043D42C /* foo@2x.png */,
 				59CCA305171122AB009E021D /* YKProductCell.xib */,
 				59CCA2CC17111107009E021D /* Supporting Files */,
 			);
@@ -253,8 +253,8 @@
 				59CCA2DA17111108009E021D /* Default@2x.png in Resources */,
 				59CCA2DC17111108009E021D /* Default-568h@2x.png in Resources */,
 				59CCA2E217111108009E021D /* YKViewController.xib in Resources */,
-				59CCA30417111D99009E021D /* moo@2x.png in Resources */,
 				59CCA306171122AB009E021D /* YKProductCell.xib in Resources */,
+				593D8EAE171151300043D42C /* foo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +474,7 @@
 				59CCA2FC17111108009E021D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		59CCA2FD17111108009E021D /* Build configuration list for PBXNativeTarget "productListTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +483,7 @@
 				59CCA2FF17111108009E021D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

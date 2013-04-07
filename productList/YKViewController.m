@@ -24,10 +24,10 @@
 }
 
 - (NSString *)imageUrlForIndex:(int)_index{
-    return @"moo.png";
+    return @"foo.png";
 }
 - (NSString *)productNameForIndex:(int)_index{
-    return [NSString stringWithFormat:@"%d男装",_index];;
+    return [NSString stringWithFormat:@"%d男装男装男装",_index];;
 }
 - (NSString *)salePriceForIndex:(int)_index{
     return [NSString stringWithFormat:@"%d88.8",_index];
