@@ -17,7 +17,7 @@
 
 
 - (NSInteger)numberOfItems{
-    return 10;
+    return 11;
 }
 - (YKProductListType)productListType{
     return _type;
@@ -27,13 +27,13 @@
     return @"moo.png";
 }
 - (NSString *)productNameForIndex:(int)_index{
-    return @"男装";
+    return [NSString stringWithFormat:@"%d男装",_index];;
 }
 - (NSString *)salePriceForIndex:(int)_index{
-    return @"88.8";
+    return [NSString stringWithFormat:@"%d88.8",_index];
 }
 - (NSString *)shopPriceForIndex:(int)_index{
-    return @"99.9";
+    return [NSString stringWithFormat:@"%d99.8",_index];;
 }
 
 - (void)reloadView{
@@ -49,7 +49,7 @@
     [super viewDidLoad];
     _type = YKProductListTypeSingle;
     self.title = @"viewC";
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(reloadView)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(reloadView)];
     self.listView = [[YKProductListView alloc] initWithFrame:CGRectMake(0, 0, 320, 460-46)];
     _listView.dataSource = self;
    [self.view addSubview:_listView];

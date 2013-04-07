@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-enum {	/* Constants returned by -operatingSystem */
+enum {	/* YKProductListType */
     YKProductListTypeTwo = 2,
     YKProductListTypeSingle = 1,
 };

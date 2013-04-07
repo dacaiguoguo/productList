@@ -19,13 +19,8 @@
 
 
 @implementation YKProductViewCellSingle
-
-
-
 @end
 @implementation YKProductViewCellTwo
-
-
 
 @end
 
@@ -88,8 +83,12 @@
         cell.leftSalePriceLabel.text = [self.dataSource salePriceForIndex:row*2];
         if (row*2+1>=[self.dataSource numberOfItems]) {
             cell.rightImageView.hidden = YES;
+            cell.rightNameLabel.hidden = YES;
+            cell.rightSalePriceLabel.hidden = YES;
         }else{
-            cell.hidden = NO;
+            cell.rightImageView.hidden = NO;
+            cell.rightSalePriceLabel.hidden = NO;
+            cell.rightNameLabel.hidden = NO;
             cell.rightNameLabel.text = [self.dataSource productNameForIndex:row*2+1];
             cell.rightSalePriceLabel.text = [self.dataSource salePriceForIndex:row*2+1];
             cell.rightImageView.image = [UIImage imageNamed:[self.dataSource imageUrlForIndex:row*2+1]];
@@ -109,27 +108,6 @@
         return cell;
     }
     assert(0);
-    
-    
-//    if (!cell) {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:idfi];
-//        int width = self.bounds.size.width/[self.dataSource productListType];
-//   
-//    }
-//    UIView *list = [self.dataSource cellViewModel];
-//    assert(list);
-//    assert([list isKindOfClass:[YKDataMoudleList class] ]);
-//    for (int i=0; i<self.numberOfColumn; ++i) {
-//        UIButton *formB = (UIButton *)[cell viewWithTag:2013+i];
-//        int getN = indexPath.row*self.numberOfColumn+i;
-//        if (getN>=list.subArray.count) {
-//            formB.hidden = YES;
-//        }else{
-//            formB.hidden = NO;
-//            assert([formB isKindOfClass:[UIButton class]]);
-//            [formB setTitle:list.subArray[getN] forState:UIControlStateNormal];
-//        }
-//    }
 
 }
 
