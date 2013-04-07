@@ -15,7 +15,9 @@
 
 @implementation YKViewController
 
-
+- (void)productListView:(YKProductListView *)productListView didSelectIndex:(int)_row{
+    NSLog(@"ss:%d",_row);
+}
 - (NSInteger)numberOfItems{
     return 11;
 }
@@ -52,6 +54,7 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(reloadView)];
     self.listView = [[YKProductListView alloc] initWithFrame:CGRectMake(0, 0, 320, 460-46)];
     _listView.dataSource = self;
+    _listView.delegate = self;
    [self.view addSubview:_listView];
 	// Do any additional setup after loading the view, typically from a nib.
 }

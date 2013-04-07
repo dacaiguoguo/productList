@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "YKProductListView.h"
-@interface YKViewController : UIViewController<YKProductListViewDataSource>
+@interface YKViewController : UIViewController<YKProductListViewDataSource,YKProductListViewDelegate>
 
 @end

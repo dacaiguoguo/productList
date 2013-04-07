@@ -65,7 +65,10 @@
     ret = ceilf((CGFloat)[self.dataSource numberOfItems]/chushu);
     return ret;
 }
-
+- (void)buttonAction:(UIButton*)sender{
+    [self.delegate productListView:self didSelectIndex:sender.tag];
+    
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *idfiTwo = @"YKTableViewCellForProductListTwo";
     static NSString *idfiSingle = @"YKTableViewCellForProductListSingle";
@@ -75,20 +78,26 @@
         YKProductViewCellTwo *cell = [tableView dequeueReusableCellWithIdentifier:idfiTwo];
         if (!cell) {
             cell = [YKXIBHelper loadObjectFromXIBName:@"YKProductCell" type:[YKProductViewCellTwo class]];
+            [cell.leftButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+            [cell.rightButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
         }
         int row = indexPath.row;
-        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.leftImageView.image =[UIImage imageNamed:[self.dataSource imageUrlForIndex:row*2]];
         cell.leftNameLabel.text = [self.dataSource productNameForIndex:row*2];
         cell.leftSalePriceLabel.text = [self.dataSource salePriceForIndex:row*2];
+        cell.leftButton.tag = row*2;
         if (row*2+1>=[self.dataSource numberOfItems]) {
             cell.rightImageView.hidden = YES;
             cell.rightNameLabel.hidden = YES;
             cell.rightSalePriceLabel.hidden = YES;
+            cell.rightButton.hidden = YES;
         }else{
             cell.rightImageView.hidden = NO;
             cell.rightSalePriceLabel.hidden = NO;
             cell.rightNameLabel.hidden = NO;
+            cell.rightButton.tag = row*2+1;
+            cell.rightButton.hidden = NO;
             cell.rightNameLabel.text = [self.dataSource productNameForIndex:row*2+1];
             cell.rightSalePriceLabel.text = [self.dataSource salePriceForIndex:row*2+1];
             cell.rightImageView.image = [UIImage imageNamed:[self.dataSource imageUrlForIndex:row*2+1]];
@@ -100,6 +109,7 @@
         if (!cell) {
             cell = [YKXIBHelper loadObjectFromXIBName:@"YKProductCell" type:[YKProductViewCellSingle class]];
         }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         int row = indexPath.row;
         cell.imageView.image= [UIImage imageNamed:[self.dataSource imageUrlForIndex:row]];
         cell.nameLabel.text = [self.dataSource productNameForIndex:row];
@@ -111,7 +121,11 @@
 
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ([self.dataSource productListType]==YKProductListTypeSingle) {
+        [self.delegate productListView:self didSelectIndex:indexPath.row];
+    }
+}
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect

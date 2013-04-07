@@ -29,8 +29,16 @@ typedef enum YKProductListType : NSInteger{
 @property (weak, nonatomic) IBOutlet UILabel *rightNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *leftSalePriceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *rightSalePriceLabel;
+@property (weak, nonatomic) IBOutlet UIButton *leftButton;
+@property (weak, nonatomic) IBOutlet UIButton *rightButton;
 
 @end
+
+@class YKProductListView;
+/**
+    @protocol YKProductListViewDataSource
+    @decription data source 按Single 模式提供。
+ */
 @protocol YKProductListViewDataSource<NSObject>
 - (NSString *)imageUrlForIndex:(int )_index;
 - (NSString *)salePriceForIndex:(int)_index;
@@ -39,9 +47,16 @@ typedef enum YKProductListType : NSInteger{
 - (NSInteger)numberOfItems;
 - (YKProductListType)productListType;
 @end
+@protocol YKProductListViewDelegate <NSObject>
+/**
+    点击了第几个，注意不是第几行
+ */
+- (void)productListView:(YKProductListView*)productListView didSelectIndex:(int)_row;
 
+@end
 
 @interface YKProductListView : UIView
 @property (weak, nonatomic) id<YKProductListViewDataSource> dataSource;
+@property (weak, nonatomic) id<YKProductListViewDelegate> delegate;
 -(void) reloadData;
 @end
