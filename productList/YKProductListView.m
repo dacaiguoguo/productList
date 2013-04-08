@@ -8,6 +8,7 @@
 
 #import "YKProductListView.h"
 #import "YKXIBHelper.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface YKProductListView()<UITableViewDataSource,UITableViewDelegate>
 
@@ -139,3 +140,30 @@
 }
 
 @end
+
+@implementation YKLineLabel
+float getTextSizeWidth(NSString*text ,float aFontSize) {
+    //    float width = 0;
+    NSString *platFormstr = text;
+    CGSize platFormconstraint = CGSizeMake(10000, 10000);
+    CGSize platFormsize =[platFormstr sizeWithFont:[UIFont systemFontOfSize:aFontSize] constrainedToSize:platFormconstraint lineBreakMode: NSLineBreakByCharWrapping ];
+    //    width = platFormsize.width;
+    //    return width;
+    return platFormsize.width;
+}
+- (void)drawRect:(CGRect)rect{
+    float width =  getTextSizeWidth(self.text, 14);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextClearRect(context, rect);
+    CGContextSetLineWidth(context, 1.0);
+    CGContextSetStrokeColorWithColor(context, [self.textColor CGColor]);
+    CGFloat x = 0;
+    CGFloat y = rect.size.height/2;
+    CGContextMoveToPoint(context, x, y);
+    CGContextAddLineToPoint(context, width, y);
+    CGContextStrokePath(context);
+    [super drawRect:rect];
+}
+
+@end
+

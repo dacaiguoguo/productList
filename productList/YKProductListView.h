@@ -60,3 +60,7 @@ typedef enum YKProductListType : NSInteger{
 @property (weak, nonatomic) id<YKProductListViewDelegate> delegate;
 -(void) reloadData;
 @end
+
+@interface YKLineLabel : UILabel
+
+@end

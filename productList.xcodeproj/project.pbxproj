@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		591576B917125FE7004638E8 /* img_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 591576B717125FE7004638E8 /* img_arrow.png */; };
 		591576BB1712602C004638E8 /* img_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 591576BA1712602C004638E8 /* img_arrow@2x.png */; };
+		591576BF171269FB004638E8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 591576BE171269FB004638E8 /* QuartzCore.framework */; };
 		593D8EAE171151300043D42C /* foo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 593D8EAD171151300043D42C /* foo@2x.png */; };
 		59CCA2C617111107009E021D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CCA2C517111107009E021D /* UIKit.framework */; };
 		59CCA2C817111107009E021D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CCA2C717111107009E021D /* Foundation.framework */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		591576B717125FE7004638E8 /* img_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_arrow.png; sourceTree = "<group>"; };
 		591576BA1712602C004638E8 /* img_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img_arrow@2x.png"; sourceTree = "<group>"; };
+		591576BE171269FB004638E8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		593D8EAD171151300043D42C /* foo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "foo@2x.png"; sourceTree = "<group>"; };
 		59CCA2C217111107009E021D /* productList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = productList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59CCA2C517111107009E021D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -79,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				591576BF171269FB004638E8 /* QuartzCore.framework in Frameworks */,
 				59CCA2C617111107009E021D /* UIKit.framework in Frameworks */,
 				59CCA2C817111107009E021D /* Foundation.framework in Frameworks */,
 				59CCA2CA17111107009E021D /* CoreGraphics.framework in Frameworks */,
@@ -101,6 +104,7 @@
 		59CCA2B917111107009E021D = {
 			isa = PBXGroup;
 			children = (
+				591576BE171269FB004638E8 /* QuartzCore.framework */,
 				59CCA2CB17111107009E021D /* productList */,
 				59CCA2EF17111108009E021D /* productListTests */,
 				59CCA2C417111107009E021D /* Frameworks */,
