@@ -2,7 +2,7 @@
 //  YKAppDelegate.m
 //  productList
 //
-//  Created by  YK on 13-4-7.
+//  Created by  yanguo.sun on 13-4-7.
 //  Copyright (c) 2013年 YEK. All rights reserved.
 //
 
