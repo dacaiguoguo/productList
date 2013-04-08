@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		591576B917125FE7004638E8 /* img_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 591576B717125FE7004638E8 /* img_arrow.png */; };
+		591576BB1712602C004638E8 /* img_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 591576BA1712602C004638E8 /* img_arrow@2x.png */; };
 		593D8EAE171151300043D42C /* foo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 593D8EAD171151300043D42C /* foo@2x.png */; };
 		59CCA2C617111107009E021D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CCA2C517111107009E021D /* UIKit.framework */; };
 		59CCA2C817111107009E021D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CCA2C717111107009E021D /* Foundation.framework */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		591576B717125FE7004638E8 /* img_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_arrow.png; sourceTree = "<group>"; };
+		591576BA1712602C004638E8 /* img_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img_arrow@2x.png"; sourceTree = "<group>"; };
 		593D8EAD171151300043D42C /* foo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "foo@2x.png"; sourceTree = "<group>"; };
 		59CCA2C217111107009E021D /* productList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = productList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59CCA2C517111107009E021D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -135,6 +139,8 @@
 				59CCA30117111202009E021D /* YKProductListView.m */,
 				59CCA3071711248A009E021D /* YKXIBHelper.h */,
 				59CCA3081711248A009E021D /* YKXIBHelper.m */,
+				591576B717125FE7004638E8 /* img_arrow.png */,
+				591576BA1712602C004638E8 /* img_arrow@2x.png */,
 				59CCA2E017111108009E021D /* YKViewController.xib */,
 				593D8EAD171151300043D42C /* foo@2x.png */,
 				59CCA305171122AB009E021D /* YKProductCell.xib */,
@@ -255,6 +261,8 @@
 				59CCA2E217111108009E021D /* YKViewController.xib in Resources */,
 				59CCA306171122AB009E021D /* YKProductCell.xib in Resources */,
 				593D8EAE171151300043D42C /* foo@2x.png in Resources */,
+				591576B917125FE7004638E8 /* img_arrow.png in Resources */,
+				591576BB1712602C004638E8 /* img_arrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
