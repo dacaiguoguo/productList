@@ -20,6 +20,7 @@
 
 
 @implementation YKProductViewCellSingle
+
 @end
 @implementation YKProductViewCellTwo
 
@@ -47,6 +48,7 @@
         _interTable = [[UITableView alloc] initWithFrame:_orgFrame style:UITableViewStylePlain] ;
         _interTable.dataSource = self;
         _interTable.delegate = self;
+        _interTable.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self addSubview:_interTable];
     }
     return _interTable;
