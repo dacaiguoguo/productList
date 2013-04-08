@@ -8,18 +8,28 @@
 
 #import "YKViewController.h"
 #import "YKProductListView.h"
+#import "YKBaseModel.h"
+
 @interface YKViewController ()
 @property (strong,nonatomic) YKProductListView *listView;
 @property (assign) YKProductListType type;
+@property (strong,nonatomic) YKProductList *listData;
+
 @end
 
 @implementation YKViewController
+- (YKProductList*)listData{
+    if (!_listData) {
+        _listData = [[YKProductList alloc] init];
+    }
+    return _listData;
 
+}
 - (void)productListView:(YKProductListView *)productListView didSelectIndex:(int)_row{
     NSLog(@"ss:%d",_row);
 }
 - (NSInteger)numberOfItems{
-    return 11;
+    return self.listData.productList.count;
 }
 - (YKProductListType)productListType{
     return _type;
@@ -29,13 +39,19 @@
     return @"foo.png";
 }
 - (NSString *)productNameForIndex:(int)_index{
-    return [NSString stringWithFormat:@"%d男装男装男装",_index];;
+    YKProduct *product = self.listData.productList[_index];
+    assert(product);
+    return product.name;
 }
 - (NSString *)salePriceForIndex:(int)_index{
-    return [NSString stringWithFormat:@"Y%d88.8",_index];
+    YKProduct *product = self.listData.productList[_index];
+    assert(product);
+
+    return product.salePrice;
 }
 - (NSString *)shopPriceForIndex:(int)_index{
-    return [NSString stringWithFormat:@"Y%d99.8",_index];;
+    YKProduct *product = self.listData.productList[_index];
+    return product.marketprice;
 }
 
 - (void)reloadView{
@@ -46,10 +62,25 @@
     }
     [self.listView reloadData];
 }
+
+- (void)setUpDatas{
+    NSMutableArray *mutArray = [[NSMutableArray alloc] init];
+    for (int i=0; i<11; i++) {
+        YKProduct *product = [[YKProduct alloc] init];
+        int randN = rand()%1000;
+        product.marketprice = [NSString stringWithFormat:@"%0.2f",randN*0.9];
+        product.salePrice = [NSString stringWithFormat:@"%d",randN];
+
+        product.name = [NSString stringWithFormat:@"%d男装男装男装",i];
+        [mutArray addObject:product];
+    }
+    self.listData.productList = mutArray;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     _type = YKProductListTypeSingle;
+    [self setUpDatas];
     self.title = @"viewC";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(reloadView)];
     self.listView = [[YKProductListView alloc] initWithFrame:CGRectMake(0, 0, 320, 460-46)];

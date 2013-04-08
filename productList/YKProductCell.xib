@@ -300,6 +300,25 @@
 							<object class="IBUIView" id="1037805544">
 								<reference key="NSNextResponder" ref="1010721537"/>
 								<int key="NSvFlags">292</int>
+								<array class="NSMutableArray" key="NSSubviews">
+									<object class="IBUIImageView" id="516249283">
+										<reference key="NSNextResponder" ref="1037805544"/>
+										<int key="NSvFlags">256</int>
+										<string key="NSFrame">{{306, 41}, {14, 14}}</string>
+										<reference key="NSSuperview" ref="1037805544"/>
+										<reference key="NSWindow"/>
+										<reference key="IBUIBackgroundColor" ref="835191015"/>
+										<bool key="IBUIOpaque">NO</bool>
+										<bool key="IBUIClipsSubviews">YES</bool>
+										<int key="IBUIContentMode">4</int>
+										<bool key="IBUIMultipleTouchEnabled">YES</bool>
+										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+										<object class="NSCustomResource" key="IBUIImage">
+											<string key="NSClassName">NSImage</string>
+											<string key="NSResourceName">img_arrow.png</string>
+										</object>
+									</object>
+								</array>
 								<string key="NSFrameSize">{320, 96}</string>
 								<reference key="NSSuperview" ref="1010721537"/>
 								<reference key="NSWindow"/>
@@ -401,23 +420,6 @@
 								<reference key="IBUIFont" ref="924299399"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 								<double key="preferredMaxLayoutWidth">127</double>
-							</object>
-							<object class="IBUIImageView" id="516249283">
-								<reference key="NSNextResponder" ref="1010721537"/>
-								<int key="NSvFlags">256</int>
-								<string key="NSFrame">{{304, 58}, {14, 14}}</string>
-								<reference key="NSSuperview" ref="1010721537"/>
-								<reference key="NSWindow"/>
-								<reference key="IBUIBackgroundColor" ref="835191015"/>
-								<bool key="IBUIOpaque">NO</bool>
-								<bool key="IBUIClipsSubviews">YES</bool>
-								<int key="IBUIContentMode">4</int>
-								<bool key="IBUIMultipleTouchEnabled">YES</bool>
-								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<object class="NSCustomResource" key="IBUIImage">
-									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">img_arrow.png</string>
-								</object>
 							</object>
 							<object class="IBUILabel" id="918534602">
 								<reference key="NSNextResponder" ref="1010721537"/>
@@ -675,7 +677,6 @@
 							<reference ref="44195421"/>
 							<reference ref="23462819"/>
 							<reference ref="772624493"/>
-							<reference ref="516249283"/>
 							<reference ref="1016320043"/>
 							<reference ref="918534602"/>
 							<reference ref="1018108990"/>
@@ -715,11 +716,6 @@
 						<reference key="parent" ref="817799368"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">41</int>
-						<reference key="object" ref="516249283"/>
-						<reference key="parent" ref="672552686"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">42</int>
 						<reference key="object" ref="918534602"/>
 						<reference key="parent" ref="672552686"/>
@@ -732,6 +728,9 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">44</int>
 						<reference key="object" ref="1037805544"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="516249283"/>
+						</array>
 						<reference key="parent" ref="672552686"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -748,6 +747,11 @@
 						<int key="objectID">47</int>
 						<reference key="object" ref="124683335"/>
 						<reference key="parent" ref="672552686"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">41</int>
+						<reference key="object" ref="516249283"/>
+						<reference key="parent" ref="1037805544"/>
 					</object>
 				</array>
 			</object>
