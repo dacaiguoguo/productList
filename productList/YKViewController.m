@@ -32,10 +32,10 @@
     return [NSString stringWithFormat:@"%d男装男装男装",_index];;
 }
 - (NSString *)salePriceForIndex:(int)_index{
-    return [NSString stringWithFormat:@"%d88.8",_index];
+    return [NSString stringWithFormat:@"Y%d88.8",_index];
 }
 - (NSString *)shopPriceForIndex:(int)_index{
-    return [NSString stringWithFormat:@"%d99.8",_index];;
+    return [NSString stringWithFormat:@"Y%d99.8",_index];;
 }
 
 - (void)reloadView{

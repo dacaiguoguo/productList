@@ -52,7 +52,11 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if([self.dataSource productListType]==YKProductListTypeSingle)
     return 97;
+    else{
+        return 135;
+    }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
